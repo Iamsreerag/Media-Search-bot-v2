@@ -66,8 +66,8 @@ async def start(bot, cmd):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('Search again', switch_inline_query_current_chat=''),
-                        InlineKeyboardButton('More Bots', url='https://t.me/ErrorXbotz')
+                        InlineKeyboardButton('♻️𝙂𝙍𝙊𝙐𝙋♻️', url='https://t.me/Movies_Club_2019'),
+                        InlineKeyboardButton('⭕️𝘾𝙃𝘼𝙉𝙉𝙀𝙇⭕️', url='https://t.me/mcnewmovies')
                     ]
                     ]
                 await bot.send_cached_media(
@@ -92,26 +92,22 @@ async def start(bot, cmd):
             )
         )
     else:
-        await cmd.reply_text(
-            START_MSG,
-            parse_mode="Markdown",
-            disable_web_page_preview=True,
+        await cmd.reply_photo(
+            photo="https://telegra.ph/file/9e4771df0f2f210ba05df.jpg",
+            caption=START_MSG,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Search Here", switch_inline_query_current_chat=''),
-                        InlineKeyboardButton("Source Code", url='https://github.com/Jinn-Of-Telegram/Media-Search-bot-v2'),
+                        InlineKeyboardButton("😎ⓄⓌⓃⒺⓇ😎", url="https://t.me/Myfreak123"),
+                        InlineKeyboardButton("♻️ⒼⓇⓄⓊⓅ♻️", url="https://t.me/Movies_Club_2019")
                     ],
-                   [
-                       InlineKeyboardButton("Update Channel", url='https://t.me/ErrorXbotz'),
-                       InlineKeyboardButton("Support Group", url='https://t.me/ErrorXsupport'),
-                    ],
-                     [
-                        InlineKeyboardButton("About", callback_data="about")
+                    [
+                        InlineKeyboardButton("⭕️𝙲𝙷𝙰𝙽𝙽𝙴𝙻⭕️", url="https://t.me/mcnewmovies"),
+                        InlineKeyboardButton("💞𝙰𝙱𝙾𝚄𝚃💞", callback_data="about"),
+                      ]
                     ]
-                ]
-            )
-        )
+                 )
+              )
 
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
@@ -196,8 +192,8 @@ async def delete(bot, message):
 async def bot_info(bot, message):
     buttons = [
         [
-            InlineKeyboardButton('Update Channel', url='https://t.me/ErrorXbotz'),
-            InlineKeyboardButton('Source Code', url='https://github.com/Jinn-Of-Telegram/Media-Search-bot-v2')
+            InlineKeyboardButton('♻️𝘾𝙃𝘼𝙉𝙉𝙀𝙇♻️', url='https://t.me/mcnewmovies'),
+            InlineKeyboardButton('⭕️𝙂𝙍𝙊𝙐𝙋⭕️', url='https://t.me/Movies_Club_2019')
         ]
         ]
-    await message.reply(text="<b>Developer : <a href='https://t.me/Jinn_007'>꧁Ⓜⓤⓣⓗⓐⓛⓘⓑ_★࿐</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nSource Code : <a href='https://github.com/Jinn-Of-Telegram/Media-Search-bot-V2'>Click here</a>\nUpdate Channel : <a href='https://t.me/ErrorXBotz'>ErrorXBotz</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+    await message.reply(text="<b><u>എന്തായാലും ഇവിടെ വരെ വന്നതല്ലേ താഴെയുള്ള ഗ്രൂപ്പിലും ചാനലിലും ജോയിൻ ആയിട്ട് പോകൂ 😪</u></b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
