@@ -103,7 +103,7 @@ async def start(bot, cmd):
                     ],
                     [
                         InlineKeyboardButton("⭕️𝙲𝙷𝙰𝙽𝙽𝙴𝙻⭕️", url="https://t.me/mcnewmovies"),
-                        InlineKeyboardButton("💞𝙰𝙱𝙾𝚄𝚃💞", callback_data="about"),
+                        InlineKeyboardButton("💞SOURCE CODE💞", url="https://t.me/mcallmovies/36"),
                       ]
                     ]
                  )
