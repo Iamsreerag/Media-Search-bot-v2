@@ -113,7 +113,7 @@ async def start(bot, cmd):
                                 )
                             InlinekeyboardButton
                                 (
-                                    '♻️OTT UPDATES♻️', url="https://t.me/mcnewmovies'
+                                    '♻️OTT UPDATES♻️', url="https://t.me/mcnewmovies"
                                 ),
                             InlinekeyboardButton
                                 (
