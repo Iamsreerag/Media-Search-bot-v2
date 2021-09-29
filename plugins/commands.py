@@ -101,36 +101,21 @@ async def start(bot, cmd):
             photo="https://telegra.ph/file/9e4771df0f2f210ba05df.jpg",
             caption=START_MSG,
             reply_markup=InlineKeyboardMarkup(
+                [
                     [
-                        [
-                            InlineKeyboardButton
-                                (
-                                    'Movie REQ 💥', url="https://t.me/Movies_Club_2019"
-                                ),
-                            InlinekeyboardButton
-                                (
-                                    '♻️Webseries♻️', url="https://t.me/MoviesClubSeriesonly"
-                                )
-                            InlinekeyboardButton
-                                (
-                                    '♻️OTT UPDATES♻️', url="https://t.me/mcnewmovies"
-                                ),
-                            InlinekeyboardButton
-                                (
-                                    'Dev✨, url="https://t.me/Myfreak123'
-                                )
-                            InlinekeyboardButton
-                                ( 
-                                    'SHARE🌐', url="https://t.me/share/url?url=https%3A//t.me/share/url%3Furl%3Dhttps%253A//t.me/Movies_Club_2019'
-                                ),
-                            InlinekeyboardButton
-                                (
-                                    'CLOSE 🔐', callback_data='close'
-                                )
-                        ]
+                        InlineKeyboardButton("Search Here", switch_inline_query_current_chat=''),
+                        InlineKeyboardButton("Source Code", url='https://github.com/Jinn-Of-Telegram/Media-Search-bot-v2'),
+                    ],
+                   [
+                       InlineKeyboardButton("Update Channel", url='https://t.me/ErrorXbotz'),
+                       InlineKeyboardButton("Support Group", url='https://t.me/ErrorXsupport'),
+                    ],
+                     [
+                        InlineKeyboardButton("About", callback_data="about")
                     ]
-                )
+                ]
             )
+        )
 
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
