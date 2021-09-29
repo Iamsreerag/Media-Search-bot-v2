@@ -103,15 +103,15 @@ async def start(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Search Here", switch_inline_query_current_chat=''),
-                        InlineKeyboardButton("Source Code", url='https://github.com/Jinn-Of-Telegram/Media-Search-bot-v2'),
+                        InlineKeyboardButton("Movie REQ💥", url='https://t.me/Movies_Club_2019'),
+                        InlineKeyboardButton("♻️Webseries♻️", url='https://t.me/MoviesClubSeriesonly'),
                     ],
                    [
-                       InlineKeyboardButton("Update Channel", url='https://t.me/ErrorXbotz'),
-                       InlineKeyboardButton("Support Group", url='https://t.me/ErrorXsupport'),
+                       InlineKeyboardButton("New Release🎞️", url='https://t.me/mcnewmovies'),
+                       InlineKeyboardButton("Channel✨", url='https://t.me/mcallmovies'),
                     ],
                      [
-                        InlineKeyboardButton("About", callback_data="about")
+                        InlineKeyboardButton("SHARE🌐", url="https://t.me/share/url?url=https%3A//t.me/share/url%3Furl%3Dhttps%253A//t.me/Movies_Club_2019")
                     ]
                 ]
             )
