@@ -1,7 +1,7 @@
 ## CREATION TECHNIQUE
 
 ### Easy Way
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Sreejithmadmax/imdbwithcaption)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Sreejithmadmax/Media-Search-bot-v2)
 ### Hard Way
 തല്ക്കാലം അത് വേണ്ട ഇത്‌ വച്ചു അഡ്ജസ്റ്റ് ചെയ്യ് ✌️
 
