@@ -101,18 +101,36 @@ async def start(bot, cmd):
             photo="https://telegra.ph/file/9e4771df0f2f210ba05df.jpg",
             caption=START_MSG,
             reply_markup=InlineKeyboardMarkup(
-                [
                     [
-                        InlineKeyboardButton("😎ⓄⓌⓃⒺⓇ😎", url="https://t.me/Myfreak123"),
-                        InlineKeyboardButton("♻️ⒼⓇⓄⓊⓅ♻️", url="https://t.me/Movies_Club_2019")
-                    ],
-                    [
-                        InlineKeyboardButton("⭕️𝙲𝙷𝙰𝙽𝙽𝙴𝙻⭕️", url="https://t.me/mcnewmovies"),
-                        InlineKeyboardButton("💞SOURCE CODE💞", url="https://t.me/mcallmovies/36"),
-                      ]
+                        [
+                            InlineKeyboardButton
+                                (
+                                    'Movie REQ 💥', url="https://t.me/Movies_Club_2019"
+                                ),
+                            InlinekeyboardButton
+                                (
+                                    '♻️Webseries♻️', url="https://t.me/MoviesClubSeriesonly"
+                                )
+                            InlinekeyboardButton
+                                (
+                                    '♻️OTT UPDATES♻️', url="https://t.me/mcnewmovies'
+                                ),
+                            InlinekeyboardButton
+                                (
+                                    'Dev✨, url="https://t.me/Myfreak123'
+                                )
+                            InlinekeyboardButton
+                                ( 
+                                    'SHARE🌐', url="https://t.me/share/url?url=https%3A//t.me/share/url%3Furl%3Dhttps%253A//t.me/Movies_Club_2019'
+                                ),
+                            InlinekeyboardButton
+                                (
+                                    'CLOSE 🔐', callback_data='close'
+                                )
+                        ]
                     ]
-                 )
-              )
+                )
+            )
 
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
