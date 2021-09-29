@@ -213,10 +213,15 @@ async def delete(bot, message):
         await msg.edit('File not found in database')
 @Client.on_message(filters.command('about'))
 async def bot_info(bot, message):
-    buttons = [
-        [
-            InlineKeyboardButton('♻️𝘾𝙃𝘼𝙉𝙉𝙀𝙇♻️', url='https://t.me/mcnewmovies'),
-            InlineKeyboardButton('⭕️𝙂𝙍𝙊𝙐𝙋⭕️', url='https://t.me/Movies_Club_2019')
-        ]
-        ]
+    buttons = [[
+            InlineKeyboardButton('♻️𝐒𝐄𝐑𝐈𝐄𝐒', url='https://t.me/MoviesClubSeriesonly'),
+            InlineKeyboardButton('𝐆𝐑𝐎𝐔𝐏⭕️', url='https://t.me/Movies_Club_2019')
+        ],[
+            InlineKeyboardButton('🎞️𝐂𝐇𝐀𝐍𝐍𝐄𝐋🎞️', url='https://t.me/mcallmovies')
+        ],[
+            InlineKeyboardButton('📍𝐔𝐏𝐃𝐀𝐓𝐄𝐒', url='https://t.me/mcallmovies'),
+            InlineKeyboardButton('𝐍𝐄𝐖 𝐑𝐄𝐋𝐄𝐀𝐒𝐄💿', url='https://t.me/mcnewmovies')
+        ],[
+            InlineKeyboardButton('📀𝐂𝐀𝐌 𝐏𝐑𝐈𝐍𝐓𝐒📀', url='https://t.me/MCmoviesall')
+        ]]
     await message.reply(text="<b><u>എന്തായാലും ഇവിടെ വരെ വന്നതല്ലേ താഴെയുള്ള ഗ്രൂപ്പിലും ചാനലിലും ജോയിൻ ആയിട്ട് പോകൂ 😪</u></b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
