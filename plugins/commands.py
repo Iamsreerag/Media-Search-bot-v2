@@ -65,15 +65,15 @@ async def start(bot, cmd):
                 if f_caption is None:
                     f_caption = f"{files.file_name}"
                 buttons = [[
-            InlineKeyboardButton('👨‍💼𝘿𝙀𝙑', url='https://t.me/MRK_YT'),
-            InlineKeyboardButton('𝙂𝙍𝙊𝙐𝙋📽️', url='https://youtu.be/uAHl5jvnrhk')
+            InlineKeyboardButton('👨‍💼𝘿𝙀𝙑', url='https://t.me/Myfreak123'),
+            InlineKeyboardButton('𝙂𝙍𝙊𝙐𝙋📽️', url='https://t.me/Movies_Club_2019')
         ],[
-            InlineKeyboardButton('🎞️𝘾𝙃𝘼𝙉𝙉𝙀𝙇🎞️', url='https://youtu.be/uAHl5jvnrhk')
+            InlineKeyboardButton('🎞️𝘾𝙃𝘼𝙉𝙉𝙀𝙇🎞️', url='https://t.me/mcallmovies')
         ],[
-            InlineKeyboardButton('🗣️𝘼𝙎𝙆 𝙉𝙊𝙒', url='https://t.me/movies_Hubh2'),
-            InlineKeyboardButton('𝙉𝙀𝙒 𝙍𝙀𝙇𝙀𝘼𝙎𝙀💿', url='https://t.me/Mo_Tech_YT')
+            InlineKeyboardButton('🗣️𝘼𝙎𝙆 𝙉𝙊𝙒', url='https://t.me/Sanoob_Achu_18'),
+            InlineKeyboardButton('𝙉𝙀𝙒 𝙍𝙀𝙇𝙀𝘼𝙎𝙀💿', url='https://t.me/mcnewmovies')
         ],[
-            InlineKeyboardButton('🤖𝙊𝙐𝙍 𝘽𝙊𝙏 𝙐𝙋𝘿𝘼𝙏𝙀𝙎🤖', url='https://youtu.be/uAHl5jvnrhk')
+            InlineKeyboardButton('🤖𝙊𝙐𝙍 𝘽𝙊𝙏 𝙐𝙋𝘿𝘼𝙏𝙀𝙎🤖', url='https://t.me/joinchat/GRyjgnhqIdtmNjI9')
         ]]
                 await bot.send_cached_media(
                     chat_id=cmd.from_user.id,
