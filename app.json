@@ -1,6 +1,7 @@
 {
-    "name": "Media Search bot",
-    "description": "When you going to send file on telegram channel this bot will save that in database, So you can search that easily in inline mode",
+    "name": "IMDB BOT WITH RATINGS",
+    "description": "മക്കളെ ഫോർക് ചെയ്യുന്നേ കൊള്ളാം ബട്ട്‌ ക്രെഡിറ്റ്‌ അണ്ണന് വേണം ✌️",
+    "logo": "https://telegra.ph/file/5829e93205a2cd37f8240.jpg",
     "keywords": [
       "telegram",
       "auto-filter",
