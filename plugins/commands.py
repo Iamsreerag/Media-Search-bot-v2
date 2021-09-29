@@ -104,7 +104,7 @@ async def start(bot, cmd):
                 [
                     [
                         InlineKeyboardButton("Movie REQ💥", url='https://t.me/Movies_Club_2019'),
-                        InlineKeyboardButton("♻️Webseries♻️", url='https://t.me/MoviesClubSeriesonly'),
+                        InlineKeyboardButton("Webseries♻️", url='https://t.me/MoviesClubSeriesonly'),
                     ],
                    [
                        InlineKeyboardButton("New Release🎞️", url='https://t.me/mcnewmovies'),
