@@ -70,27 +70,19 @@ async def filter(client, message):
                     [InlineKeyboardButton(text=f"{filename}",callback_data=f"subinps#{file_id}")]
                     )
             else:
-        Send_message = await bot.send_message(
-            chat_id=update.chat.id,
-            text="<b>Couldn't Find This Movie.Try Again ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക 🥺</b>",
-            reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "Search In Google", url=f"https://google.com/search?q={query}" # URL
-                    )
-                ]
-            ]
-        ),
-            reply_to_message_id=update.message_id
-        )
-        await asyncio.sleep(10)
-        await Send_message.delete()
-    
+            await client.send_sticker(chat_id=message.from_user.id, sticker='CAADBQADMwIAAtbcmFelnLaGAZhgBwI')
+            return
 
-    if len(results) == 0: # double check
-        return
+        if not btn:
+            return
 
+        if len(btn) > 10: 
+            btns = list(split_list(btn, 10)) 
+            keyword = f"{message.chat.id}-{message.message_id}"
+            BUTTONS[keyword] = {
+                "total" : len(btns),
+                "buttons" : btns
+            }
         else:
             buttons = btn
             buttons.append(
@@ -147,31 +139,21 @@ async def group(client, message):
                     [InlineKeyboardButton(text=f"{filename}", url=f"https://telegram.dog/{nyva}?start=subinps_-_-_-_{file_id}")]
                 )
             else:
-        Send_message = await bot.send_message(
-            chat_id=update.chat.id,
-            text="<b>Couldn't Find This Movie.Try Again ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക 🥺</b>",
-            reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "Search In Google", url=f"https://google.com/search?q={query}" # URL
-                    )
-                ]
-            ]
-        ),
-            reply_to_message_id=update.message_id
-        )
-        await asyncio.sleep(10)
-        await Send_message.delete()
-    
+            return
+        if not btn:
+            return
 
-    if len(results) == 0: # double check
-        return
-
+        if len(btn) > 10: 
+            btns = list(split_list(btn, 10)) 
+            keyword = f"{message.chat.id}-{message.message_id}"
+            BUTTONS[keyword] = {
+                "total" : len(btns),
+                "buttons" : btns
+            }
         else:
             buttons = btn
             buttons.append(
-                [InlineKeyboardButton(text="🔰Pages 1/1",callback_data="pages")]
+                [InlineKeyboardButton(text="🔰 Pages 1/1",callback_data="pages")]
             )
             poster=None
             if API_KEY:
