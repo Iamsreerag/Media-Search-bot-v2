@@ -69,12 +69,32 @@ async def filter(client, message):
                 btn.append(
                     [InlineKeyboardButton(text=f"{filename}",callback_data=f"subinps#{file_id}")]
                     )
-        else:
-            await client.send_sticker(chat_id=message.from_user.id, sticker='CAADBQADMwIAAtbcmFelnLaGAZhgBwI')
-            return
-
-        if not btn:
-            return
+            else:
+        Send_message=await bot.send_video(
+                chat_id=update.chat.id,
+                video="https://telegra.ph/file/c2c0ff4b927dcc50e7922.mp4",
+                caption=f"Couldn't Find This Movie.Please Try Again Or Search Google Or Not Get Movie Report Admins👉"
+                        f"<b><a href='https://t.me/Myfreak123'>👉Admin</a></b>. \n\n"
+                        f"ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക🔍കൂടുതൽ അറിയാൻ വീഡിയോ കാണുക(25 Sec)",
+                parse_mode="html",
+                reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "♻️三 ƈօռȶǟƈȶ ǟɖʍɨռ 三♻️", url=f"https://t.me/joinchat/Myfreak123" 
+                    )
+                ]
+            ]
+        ),
+                reply_to_message_id=update.message_id
+            )
+        await asyncio.sleep(25) # in seconds
+        await Send_message.delete()
+        # await bot.delete_messages(update.chat.id,update.message_id)
+        return  # return if no files found for that query
+    
+    if len(results) == 0:   # double check
+        return
 
         if len(btn) > 10: 
             btns = list(split_list(btn, 10)) 
@@ -138,10 +158,32 @@ async def group(client, message):
                 btn.append(
                     [InlineKeyboardButton(text=f"{filename}", url=f"https://telegram.dog/{nyva}?start=subinps_-_-_-_{file_id}")]
                 )
-        else:
-            return
-        if not btn:
-            return
+            else:
+        Send_message=await bot.send_video(
+                chat_id=update.chat.id,
+                video="https://telegra.ph/file/c2c0ff4b927dcc50e7922.mp4",
+                caption=f"Couldn't Find This Movie.Please Try Again Or Search Google Or Not Get Movie Report Admins👉"
+                        f"<b><a href='https://t.me/Myfreak123'>👉Admin</a></b>. \n\n"
+                        f"ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക🔍കൂടുതൽ അറിയാൻ വീഡിയോ കാണുക(25 Sec)",
+                parse_mode="html",
+                reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "♻️三 ƈօռȶǟƈȶ ǟɖʍɨռ 三♻️", url=f"https://t.me/joinchat/Myfreak123" 
+                    )
+                ]
+            ]
+        ),
+                reply_to_message_id=update.message_id
+            )
+        await asyncio.sleep(25) # in seconds
+        await Send_message.delete()
+        # await bot.delete_messages(update.chat.id,update.message_id)
+        return  # return if no files found for that query
+    
+    if len(results) == 0:   # double check
+        return
 
         if len(btn) > 10: 
             btns = list(split_list(btn, 10)) 
