@@ -27,14 +27,14 @@ async def start(bot, cmd):
                 ident, file_id = cmd.text.split("_-_-_-_")
                 await bot.send_message(
                     chat_id=cmd.from_user.id,
-                    text="**Please Join My Updates Channel to use this Bot!**",
+                    text="**Please Join My Updates Channel to use this Bot!👉ചാനലിൽ ജോയിൻ ചെയ്ത് Restart🔃 ക്ലിക്ക് ചെയ്യുക✌️**",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
+                                InlineKeyboardButton("🔰Join Channel🔰", url=invite_link.invite_link)
                             ],
                             [
-                                InlineKeyboardButton(" 🔄 Try Again", callback_data=f"checksub#{file_id}")
+                                InlineKeyboardButton(" 🔄Restart🔃", callback_data=f"checksub#{file_id}")
                             ]
                         ]
                     ),
@@ -87,11 +87,11 @@ async def start(bot, cmd):
         invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
         await bot.send_message(
             chat_id=cmd.from_user.id,
-            text="**Please Join My Updates Channel to use this Bot!**",
+            text="**Please Join My Updates Channel to use this Bot!👉ചാനലിൽ ജോയിൻ ചെയ്ത് Restart🔃 ക്ലിക്ക് ചെയ്യുക✌️**",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
+                        InlineKeyboardButton("🔰Join Channel🔰", url=invite_link.invite_link)
                     ]
                 ]
             )
@@ -209,4 +209,4 @@ async def bot_info(bot, message):
         ],[
             InlineKeyboardButton('📀𝐂𝐀𝐌 𝐏𝐑𝐈𝐍𝐓𝐒📀', url='https://t.me/MCmoviesall')
         ]]
-    await message.reply(text="<b><u>എന്തായാലും ഇവിടെ വരെ വന്നതല്ലേ താഴെയുള്ള ഗ്രൂപ്പിലും ചാനലിലും ജോയിൻ ആയിട്ട് പോകൂ 😪</u></b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+    await message.reply(text="<b><u>😁എന്തിനാ മോനെ ഇത്രേം സാഹസം കാണിച്ചത് 📃Source Code📃 ന് വേണ്ടിയാണോ🙄ന്തയാലും ഇവിടെ വരെ വന്നില്ലേ🤔 ചാനലിലും ഗ്രൂപ്പിലുമൊക്കെ ജോയിൻ😛 ചെയ്തിട്ട് പൊക്കോ🚶🤧</u></b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
