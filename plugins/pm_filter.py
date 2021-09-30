@@ -9,7 +9,7 @@ from utils import get_filter_results, get_file_details, is_subscribed, get_poste
 BUTTONS = {}
 BOT = {}
 
-RATING = ["5.1 | IMDB", "6.2 | IMDB", "7.3 | IMDB", "8.4 | IMDB", "9.5 | IMDB", ]
+RATING = ["(5.1/10)", "(6.2/10)", "(7.3/10)", "(8.4/10)", "(9.5/10)", "(4.3/10)", "(7.2/10)", "(8.3/10)", "(7.4/10)", "(5.3/10)",]
 GENRES = ["fun, fact",
          "Thriller, Comedy",
          "Drama, Comedy",
