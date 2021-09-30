@@ -10,13 +10,15 @@ BUTTONS = {}
 BOT = {}
 
 RATING = ["(5.1/10)", "(6.2/10)", "(7.3/10)", "(8.4/10)", "(9.5/10)", "(4.3/10)", "(7.2/10)", "(8.3/10)", "(7.4/10)", "(5.3/10)",]
-GENRES = ["fun, fact",
+GENRES = ["Crime, Drama, Fantasy",
          "Thriller, Comedy",
-         "Drama, Comedy",
-         "Family, Drama",
+         "Drama, Romance, Thriller",
+         "Comedy, Drama, Family",
          "Action, Adventure",
-         "Film Noir",
-         "Documentary"]
+         "Drama, Film-Noir, Thriller",
+         "Documentary, Biography, Sport",
+         "Action, Crime, Mystery",
+         "Adventure, Comedy, Drama"]
 
 @Client.on_message(filters.text & filters.private & filters.incoming & filters.user(AUTH_USERS) if AUTH_USERS else filters.text & filters.private & filters.incoming)
 async def filter(client, message):
@@ -37,7 +39,7 @@ async def filter(client, message):
         except UserNotParticipant:
             await client.send_message(
                 chat_id=message.from_user.id,
-                text="**Please Join My Updates Channel to use this Bot!👉ചാനലിൽ ജോയിൻ ചെയ്ത് Restart🔃 ക്ലിക്ക് ചെയ്യുക✌️**",
+                text="**Please Join My Updates Channel to use this Bot!👉ചാനലിൽ ജോയിൻ ചെയ്തതിനു ശേഷം ഉപയോഗിക്കുക✌️**",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -86,7 +88,7 @@ async def filter(client, message):
         else:
             buttons = btn
             buttons.append(
-                [InlineKeyboardButton(text="📜 Pages 1/1",callback_data="pages")]
+                [InlineKeyboardButton(text="📜 Pages 1/1📜",callback_data="pages")]
             )
             poster=None
             if API_KEY:
@@ -102,10 +104,10 @@ async def filter(client, message):
         buttons = data['buttons'][0].copy()
 
         buttons.append(
-            [InlineKeyboardButton(text="NEXT »»",callback_data=f"next_0_{keyword}")]
+            [InlineKeyboardButton(text="NEXT⏭️",callback_data=f"next_0_{keyword}")]
         )    
         buttons.append(
-            [InlineKeyboardButton(text=f"📃 Pages 1/{data['total']}",callback_data="pages")]
+            [InlineKeyboardButton(text=f"📃 Pages 1/{data['total']}📃",callback_data="pages")]
         )
         poster=None
         if API_KEY:
@@ -123,7 +125,7 @@ async def group(client, message):
         btn = []
 
         search = message.text
-        result_txt = f"**🎬 Title:** {search}\n**🌟 Rating:** {random.choice(RATING)}\n**🎭 Genre:** {random.choice(GENRES)}\n**©️ {message.chat.title} 🍿**"
+        result_txt = f"**🎬Movie Name:** {search}\n\n**🌟IMDb Rating:** {random.choice(RATING)}\n\n**🎞️Genre:** {random.choice(GENRES)}\n\n**™️{message.chat.title}™️**"
 
         nyva=BOT.get("username")
         if not nyva:
@@ -134,7 +136,7 @@ async def group(client, message):
         if files:
             for file in files:
                 file_id = file.file_id
-                filename = f"🎬 [{get_size(file.file_size)}] 🎥 {file.file_name}"
+                filename = f"🎬[{get_size(file.file_size)}]🎥{file.file_name}"
                 btn.append(
                     [InlineKeyboardButton(text=f"{filename}", url=f"https://telegram.dog/{nyva}?start=subinps_-_-_-_{file_id}")]
                 )
@@ -153,7 +155,7 @@ async def group(client, message):
         else:
             buttons = btn
             buttons.append(
-                [InlineKeyboardButton(text="📜 Pages 1/1",callback_data="pages")]
+                [InlineKeyboardButton(text="📜 Pages 1/1📜",callback_data="pages")]
             )
             poster=None
             if API_KEY:
@@ -168,10 +170,10 @@ async def group(client, message):
         buttons = data['buttons'][0].copy()
 
         buttons.append(
-            [InlineKeyboardButton(text="NEXT »»",callback_data=f"next_0_{keyword}")]
+            [InlineKeyboardButton(text="NEXT⏭️",callback_data=f"next_0_{keyword}")]
         )    
         buttons.append(
-            [InlineKeyboardButton(text=f"📜 Pages 1/{data['total']}",callback_data="pages")]
+            [InlineKeyboardButton(text=f"📜 Pages 1/{data['total']}📜",callback_data="pages")]
         )
         poster=None
         if API_KEY:
@@ -221,10 +223,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons = data['buttons'][int(index)+1].copy()
 
                 buttons.append(
-                    [InlineKeyboardButton("«« BACK", callback_data=f"back_{int(index)+1}_{keyword}")]
+                    [InlineKeyboardButton("⏮️BACK", callback_data=f"back_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"📜 Pages {int(index)+2}/{data['total']}", callback_data="pages")]
+                    [InlineKeyboardButton(f"📜 Pages {int(index)+2}/{data['total']}📜", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -238,7 +240,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("«« BACK", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"📜 Pages {int(index)+2}/{data['total']}", callback_data="pages")]
+                    [InlineKeyboardButton(f"📜 Pages {int(index)+2}/{data['total']}📜", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -259,10 +261,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons = data['buttons'][int(index)-1].copy()
 
                 buttons.append(
-                    [InlineKeyboardButton("NEXT »»", callback_data=f"next_{int(index)-1}_{keyword}")]
+                    [InlineKeyboardButton("NEXT⏭️", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"📜 Pages {int(index)}/{data['total']}", callback_data="pages")]
+                    [InlineKeyboardButton(f"📜 Pages {int(index)}/{data['total']}📜", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -273,10 +275,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons = data['buttons'][int(index)-1].copy()
 
                 buttons.append(
-                    [InlineKeyboardButton("«« BACK", callback_data=f"back_{int(index)-1}_{keyword}"),InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{int(index)-1}_{keyword}")]
+                    [InlineKeyboardButton("⏮️BACK", callback_data=f"back_{int(index)-1}_{keyword}"),InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"📃 Pages {int(index)}/{data['total']}", callback_data="pages")]
+                    [InlineKeyboardButton(f"📃 Pages {int(index)}/{data['total']}📃", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
