@@ -316,12 +316,18 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         f_caption=f_caption
                 if f_caption is None:
                     f_caption = f"{files.file_name}"
-                buttons = [
-                    [
-                     InlineKeyboardButton('📥 More Bots 📥', url='https://t.me/ErrorXBotz'),
-                    ]
-                    ]
-                
+                buttons = [[
+            InlineKeyboardButton('♻️𝐒𝐄𝐑𝐈𝐄𝐒', url='https://t.me/MoviesClubSeriesonly'),
+            InlineKeyboardButton('𝐆𝐑𝐎𝐔𝐏⭕️', url='https://t.me/Movies_Club_2019')
+        ],[
+            InlineKeyboardButton('🎞️𝐂𝐇𝐀𝐍𝐍𝐄𝐋🎞️', url='https://t.me/mcallmovies')
+        ],[
+            InlineKeyboardButton('📍𝐔𝐏𝐃𝐀𝐓𝐄𝐒', url='https://t.me/mcallmovies'),
+            InlineKeyboardButton('𝐍𝐄𝐖 𝐑𝐄𝐋𝐄𝐀𝐒𝐄💿', url='https://t.me/mcnewmovies')
+        ],[
+            InlineKeyboardButton('📀𝐂𝐀𝐌 𝐏𝐑𝐈𝐍𝐓𝐒📀', url='https://t.me/MCmoviesall')
+        ]]
+               
                 await query.answer()
                 await client.send_cached_media(
                     chat_id=query.from_user.id,
@@ -347,11 +353,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         f_caption=f_caption
                 if f_caption is None:
                     f_caption = f"{title}"
-                buttons = [
-                    [
-                        InlineKeyboardButton('📥 More Bots 📥', url='https://t.me/ErrorXBotz'),
-                    ]
-                    ]
+                buttons = [[
+            InlineKeyboardButton('♻️𝐒𝐄𝐑𝐈𝐄𝐒', url='https://t.me/MoviesClubSeriesonly'),
+            InlineKeyboardButton('𝐆𝐑𝐎𝐔𝐏⭕️', url='https://t.me/Movies_Club_2019')
+        ],[
+            InlineKeyboardButton('🎞️𝐂𝐇𝐀𝐍𝐍𝐄𝐋🎞️', url='https://t.me/mcallmovies')
+        ],[
+            InlineKeyboardButton('📍𝐔𝐏𝐃𝐀𝐓𝐄𝐒', url='https://t.me/mcallmovies'),
+            InlineKeyboardButton('𝐍𝐄𝐖 𝐑𝐄𝐋𝐄𝐀𝐒𝐄💿', url='https://t.me/mcnewmovies')
+        ],[
+            InlineKeyboardButton('📀𝐂𝐀𝐌 𝐏𝐑𝐈𝐍𝐓𝐒📀', url='https://t.me/MCmoviesall')
+        ]]
                 
                 await query.answer()
                 await client.send_cached_media(
@@ -365,4 +377,4 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "pages":
             await query.answer()
     else:
-        await query.answer("Nice.. Next Time Sure You Will Get It 🤭😝",show_alert=True)
+        await query.answer("🙄ഇത്‌ നീ റിക്വസ്റ്റ് ചെയ്തേ അല്ലലോ പിന്നെന്തിനാ ഇതിൽ കേറി കളിക്കുന്നത്🤭😝",show_alert=True)
