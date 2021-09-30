@@ -286,12 +286,18 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 )
                 return
         elif query.data == "about":
-            buttons = [
-                [
-                    InlineKeyboardButton('Update Channel', url='https://t.me/ErrorXbotz'),
-                ]
-                ]
-            await query.message.edit(text="<b>Developer : <a href='https://t.me/Jinn_007'>꧁Ⓜⓤⓣⓗⓐⓛⓘⓑ_★࿐</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\n Update Channel : <a href='https://t.me/ErrorXBotz'>ErrorXBotz</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+            buttons = [[
+            InlineKeyboardButton('👨‍💼𝐃𝐄𝐕', url='https://t.me/Myfreak123'),
+            InlineKeyboardButton('𝐆𝐑𝐎𝐔𝐏📽️', url='https://t.me/Movies_Club_2019')
+        ],[
+            InlineKeyboardButton('🎞️𝐂𝐇𝐀𝐍𝐍𝐄𝐋🎞️', url='https://t.me/mcallmovies')
+        ],[
+            InlineKeyboardButton('🗣️𝐀𝐒𝐊 𝐍𝐎𝐖', url='https://t.me/Sanoob_Achu_18'),
+            InlineKeyboardButton('𝐍𝐄𝐖 𝐑𝐄𝐋𝐄𝐀𝐒𝐄💿', url='https://t.me/mcnewmovies')
+        ],[
+            InlineKeyboardButton('🤖𝐎𝐔𝐑 𝐁𝐎𝐓 𝐔𝐏𝐃𝐀𝐓𝐄𝐒🤖', url='https://t.me/joinchat/GRyjgnhqIdtmNjI9')
+        ]]
+            await query.message.edit(text="<b>★Ⓜ️🌀𝚅𝙸𝙴𝚂_𝙲𝙻𝚄𝙱_𝟸⭕️𝟷𝟿™★: <a href='https://t.me/Movies_Club_2019'>🔰GROUP🔰</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
 
 
