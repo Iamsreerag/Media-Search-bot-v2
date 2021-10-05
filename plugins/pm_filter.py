@@ -125,12 +125,7 @@ async def group(client, message):
         btn = []
 
         search = message.text
-        result_txt = f"**🎬Movie Name:** {search}\n\n**🌟IMDb Rating:** {random.choice(RATING)}\n\n**🎞️Genre:** {random.choice(GENRES)}\n\n**🎤Group:** {message.chat.title}™️\n\n╔ 🍿 ᴄʜᴀɴɴᴇʟ : [ᴍᴀʟʟᴜ ʙʀᴏs](https://telegram.dog/mallubros)\n\n
-╚ 📮 ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ʙʜᴀsɪ ²·⁰](https://t.me/BhasiRobot)\n\n
-
-🤪 ᴘʀᴏ ᴛɪᴘs  : <code>If you don't see the files of the movie you asked for look at next page</code>\n\n
-
-😁 പ്രൊ ടിപ്സ് :</b> <code>ചോദിച്ച മൂവി ഫയൽ കാണുന്നില്ല എങ്കിൽ അടുത്ത പേജിൽ നോക്കുക</code>**"
+        result_txt = f"**🎬Movie Name:** {search}\n\n**🌟IMDb Rating:** {random.choice(RATING)}\n\n**🎞️Genre:** {random.choice(GENRES)}\n\n**🎤Group:** {message.chat.title}™️**"
 
         nyva=BOT.get("username")
         if not nyva:
