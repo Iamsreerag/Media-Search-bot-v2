@@ -127,12 +127,12 @@ async def start(bot, cmd):
                         InlineKeyboardButton("➕ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 ➕", url= "https://t.me/Cv_links_project7_bot?startgroup=true")
                     ],
                     [
-                        InlineKeyboardButton("🔍 𝖲𝖾𝖺𝗋𝖼𝗁 𝖧𝖾𝗋𝖾", switch_inline_query_current_chat=''),
-                        InlineKeyboardButton("𝖦𝗋𝗈𝗎𝗉", url="https://t.me/cinema_beacon_group")
+                        InlineKeyboardButton("🔰 Group", url="https://t.me/Movies_Club_2019"),
+                        InlineKeyboardButton("📃 Channel", url="https://t.me/mcnewmovies")
                     ],
                     [
-                        InlineKeyboardButton("🕵️‍♂️ 𝖢𝗋𝖾𝖺𝗍𝗈𝗋", url="https://t.me/Joel_TG"),
-                        InlineKeyboardButton("😊 𝖠𝖻𝗈𝗎𝗍", callback_data="about")
+                        InlineKeyboardButton("🕵️‍♂️ 𝖢𝗋𝖾𝖺𝗍𝗈𝗋", url="https://t.me/Myfreak123"),
+                        InlineKeyboardButton("😊 𝖠𝖻𝗈𝗎𝗍", url="https://t.me/mcallmovies/46")
                     ]    
                 ]
             )
