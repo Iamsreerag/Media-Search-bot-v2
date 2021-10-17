@@ -49,8 +49,7 @@ async def start(bot, cmd):
                 await bot.send_photo(
                     chat_id=cmd.from_user.id,
                     photo=f"{random.choice(PHOTO)}",
-                    text="**Please Join My Updates Channel to use this Bot!👉ചാനലിൽ ജോയിൻ ചെയ്ത് Restart🔃 ക്ലിക്ക് ചെയ്യുക✌️**",
-                    reply_markup=InlineKeyboardMarkup(
+                   reply_markup=InlineKeyboardMarkup(
                         [
                             [
                                 InlineKeyboardButton("🔰Join Channel🔰", url=invite_link.invite_link)
