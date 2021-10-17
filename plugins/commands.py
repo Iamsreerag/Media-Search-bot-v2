@@ -46,9 +46,9 @@ async def start(bot, cmd):
                     return
             except UserNotParticipant:
                 ident, file_id = cmd.text.split("_-_-_-_")
-                await bot.send_video(
+                await bot.send_photo(
                     chat_id=cmd.from_user.id,
-                    photo=f"https://telegra.ph/file/520bad22828bedd35c0f4.mp4",
+                    photo=f"https://telegra.ph/file/a6026e2dbb69e210c0b9f.jpg",
                    reply_markup=InlineKeyboardMarkup(
                         [
                             [
@@ -63,9 +63,9 @@ async def start(bot, cmd):
                 )
                 return
             except Exception:
-                await bot.send_video(
+                await bot.send_photo(
                     chat_id=cmd.from_user.id,
-                    photo=f"https://telegra.ph/file/520bad22828bedd35c0f4.mp4",
+                    photo=f"https://telegra.ph/file/a6026e2dbb69e210c0b9f.jpg",
                     caption="Something went Wrong.",
                     parse_mode="markdown",
                     disable_web_page_preview=True
@@ -102,9 +102,9 @@ async def start(bot, cmd):
             await cmd.reply_text(f"Something went wrong!\n\n**Error:** `{err}`")
     elif len(cmd.command) > 1 and cmd.command[1] == 'subscribe':
         invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
-        await bot.send_video(
+        await bot.send_photo(
             chat_id=cmd.from_user.id,
-            photo=f"https://telegra.ph/file/520bad22828bedd35c0f4.mp4",
+            photo=f"https://telegra.ph/file/a6026e2dbb69e210c0b9f.jpg",
             caption="**Please Join My Updates Channel to use this Bot!**",
             reply_markup=InlineKeyboardMarkup(
                 [
