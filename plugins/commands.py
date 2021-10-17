@@ -48,7 +48,7 @@ async def start(bot, cmd):
                 ident, file_id = cmd.text.split("_-_-_-_")
                 await bot.send_photo(
                     chat_id=cmd.from_user.id,
-                    photo=f"https://telegra.ph/file/a6026e2dbb69e210c0b9f.jpg",
+                    photo=f"https://telegra.ph/file/9cb142a92f808f4d2ee6b.jpg",
                    reply_markup=InlineKeyboardMarkup(
                         [
                             [
@@ -65,7 +65,7 @@ async def start(bot, cmd):
             except Exception:
                 await bot.send_photo(
                     chat_id=cmd.from_user.id,
-                    photo=f"https://telegra.ph/file/a6026e2dbb69e210c0b9f.jpg",
+                    photo=f"https://telegra.ph/file/9cb142a92f808f4d2ee6b.jpg",
                     caption="Something went Wrong.",
                     parse_mode="markdown",
                     disable_web_page_preview=True
@@ -104,7 +104,7 @@ async def start(bot, cmd):
         invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
         await bot.send_photo(
             chat_id=cmd.from_user.id,
-            photo=f"https://telegra.ph/file/a6026e2dbb69e210c0b9f.jpg",
+            photo=f"https://telegra.ph/file/9cb142a92f808f4d2ee6b.jpg",
             caption="**Please Join My Updates Channel to use this Bot!**",
             reply_markup=InlineKeyboardMarkup(
                 [
