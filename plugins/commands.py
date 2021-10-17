@@ -7,6 +7,16 @@ from utils import Media, get_file_details
 from pyrogram.errors import UserNotParticipant
 logger = logging.getLogger(__name__)
 
+PHOTO = [
+    "https://telegra.ph/file/140299fcd89dbd4a0ba92.jpg",
+    "https://telegra.ph/file/59fefdf363fd828595589.jpg",
+    "https://telegra.ph/file/2b2518ccd770b82ceef03.jpg",
+    "https://telegra.ph/file/c6f438023c60b1845552e.jpg",
+    "https://telegra.ph/file/5ff727c611adfdb209a44.jpg",
+    "https://telegra.ph/file/99a2a5b8be0445ebd23ad.jpg",
+    "https://telegra.ph/file/ce9d7001e57ad2eab84e0.jpg"
+]
+
 @Client.on_message(filters.command("start"))
 async def start(bot, cmd):
     usr_cmdall1 = cmd.text
@@ -99,7 +109,7 @@ async def start(bot, cmd):
     else:
         await cmd.reply_photo(
 
-            photo="https://telegra.ph/file/8bf2bf2d268367eff859e.jpg",
+            photo=f"{random.choice(PHOTO)}",
 
             caption=f"<b>Hai</b> {cmd.from_user.mention}  Brooh!🙋,\n\n<b>I'm[☞ 𝙸𝙼𝙳𝙱 𝙰𝚄𝚃𝙾 𝙵𝙸𝙻𝚃𝙴𝚁](https://t.me/Imdbfilter_bot) or you can call me as Auto-Filter Bot You Can Use Me As A Auto-filter in Your Group</b> ....\n\n<b>Its Easy To Use Me; Just Add Me To Your Group As Admin, Thats All, i will Provide Movies There</b>...🤓\n\n<b>©️MᴀɪɴᴛᴀɪɴᴇD Bʏ</b>   <a href=tg://user?id=718307810>🇮🇳🏆 𝒇𝔬𝔯ｋｅ𝓡 Ｔｇ🇮🇳💥♨</a>",
 
