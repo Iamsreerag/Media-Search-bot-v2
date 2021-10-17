@@ -46,9 +46,9 @@ async def start(bot, cmd):
                     return
             except UserNotParticipant:
                 ident, file_id = cmd.text.split("_-_-_-_")
-                await bot.send_photo(
+                await bot.send_video(
                     chat_id=cmd.from_user.id,
-                    photo=f"{random.choice(PHOTO)}",
+                    photo=f"https://telegra.ph/file/520bad22828bedd35c0f4.mp4",
                    reply_markup=InlineKeyboardMarkup(
                         [
                             [
