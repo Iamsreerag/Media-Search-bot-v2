@@ -1,12 +1,14 @@
 import os
 import logging
+from config import Config
+from .fonts import Fonts
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from info import START_MSG, CHANNELS, ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION
 from utils import Media, get_file_details
 from pyrogram.errors import UserNotParticipant
 logger = logging.getLogger(__name__)
-
+import random
 PHOTO = [
     "https://telegra.ph/file/140299fcd89dbd4a0ba92.jpg",
     "https://telegra.ph/file/59fefdf363fd828595589.jpg",
