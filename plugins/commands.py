@@ -86,22 +86,17 @@ async def start(bot, cmd):
                         f_caption=f_caption
                 if f_caption is None:
                     f_caption = f"{files.file_name}"
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                    [
-                        InlineKeyboardButton("➕ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 ➕", url= "https://t.me/Imdbfilter_bot?startgroup=true")
-                    ],
-                    [
-                        InlineKeyboardButton("🔰 Group", url="https://t.me/Movies_Club_2019"),
-                        InlineKeyboardButton("📃 Channel", url="https://t.me/mcnewmovies")
-                    ],
-                    [
-                        InlineKeyboardButton("🕵️‍♂️ 𝖢𝗋𝖾𝖺𝗍𝗈𝗋", url="https://t.me/Myfreak123"),
-                        InlineKeyboardButton("😊 𝖠𝖻𝗈𝗎𝗍", url="https://t.me/mcallmovies/46")
-                    ]    
-                ]
-            )
-         )
+                buttons = [[
+            InlineKeyboardButton('♻️𝐒𝐄𝐑𝐈𝐄𝐒', url='https://t.me/MoviesClubSeriesonly'),
+            InlineKeyboardButton('𝐆𝐑𝐎𝐔𝐏⭕️', url='https://t.me/Movies_Club_2019')
+        ],[
+            InlineKeyboardButton('🎞️𝐂𝐇𝐀𝐍𝐍𝐄𝐋🎞️', url='https://t.me/mcallmovies')
+        ],[
+            InlineKeyboardButton('📍𝐔𝐏𝐃𝐀𝐓𝐄𝐒', url='https://t.me/mcallmovies'),
+            InlineKeyboardButton('𝐍𝐄𝐖 𝐑𝐄𝐋𝐄𝐀𝐒𝐄💿', url='https://t.me/mcnewmovies')
+        ],[
+            InlineKeyboardButton('📀𝐂𝐀𝐌 𝐏𝐑𝐈𝐍𝐓𝐒📀', url='https://t.me/MCmoviesall')
+        ]]
                 await bot.send_cached_media(
                     chat_id=cmd.from_user.id,
                     file_id=file_id,
