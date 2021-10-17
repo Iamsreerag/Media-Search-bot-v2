@@ -1,5 +1,6 @@
 import os
 import logging
+import random
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from info import START_MSG, CHANNELS, ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION
@@ -7,14 +8,49 @@ from utils import Media, get_file_details
 from pyrogram.errors import UserNotParticipant
 logger = logging.getLogger(__name__)
 
+ADMINS = int(os.environ.get("ADMINS", 1745047302))
+
 PHOTO = [
-    "https://telegra.ph/file/140299fcd89dbd4a0ba92.jpg",
-    "https://telegra.ph/file/59fefdf363fd828595589.jpg",
-    "https://telegra.ph/file/2b2518ccd770b82ceef03.jpg",
-    "https://telegra.ph/file/c6f438023c60b1845552e.jpg",
-    "https://telegra.ph/file/5ff727c611adfdb209a44.jpg",
-    "https://telegra.ph/file/99a2a5b8be0445ebd23ad.jpg",
-    "https://telegra.ph/file/ce9d7001e57ad2eab84e0.jpg"
+    "https://telegra.ph/file/9c47001f468a7d8ec3b85.jpg",
+    "https://telegra.ph/file/f3fb811e5b75175dbe6a2.jpg",
+    "https://telegra.ph/file/011b4087cdb8a0d07644f.jpg",
+    "https://telegra.ph/file/2c980314c0cdc1b9e2058.jpg",
+    "https://telegra.ph/file/e5f6428c770586043f90d.jpg",
+    "https://telegra.ph/file/b305e461514ff4919dcf9.jpg",
+    "https://telegra.ph/file/6b07d1e8b92b438de4e12.jpg",
+    "https://telegra.ph/file/b3e3417cdc4ec08241434.jpg",
+    "https://telegra.ph/file/6af9875a9a3a6c665ac6d.jpg",
+    "https://telegra.ph/file/91c596e85fde3e0aae79f.jpg",
+    "https://telegra.ph/file/56398140fae3873a56898.jpg",
+    "https://telegra.ph/file/dec15fb3bc3f0bc22880a.jpg",
+    "https://telegra.ph/file/09ffd32fd9c4984078219.jpg",
+    "https://telegra.ph/file/05e04a3b08b30c815a322.jpg",
+    "https://telegra.ph/file/f6f599389f7563c8385a6.jpg",
+    "https://telegra.ph/file/561fe647eee3a0b1bc3c8.jpg",
+    "https://telegra.ph/file/e1efa9565ace2324614ff.jpg",
+    "https://telegra.ph/file/b9585457e6ae7cc834ac6.jpg",
+    "https://telegra.ph/file/444af460ab9785d52e229.jpg",
+    "https://telegra.ph/file/05931986e2599d0ee6815.jpg",
+    "https://telegra.ph/file/968cbb7c6b04b776ff26e.jpg",
+    "https://telegra.ph/file/40815aab00039f9e5db8b.jpg",
+    "https://telegra.ph/file/34bafb8438ad3ef47ae78.jpg",
+    "https://telegra.ph/file/cf32ae611eb37862e61d5.jpg",
+    "https://telegra.ph/file/f9303edef6f4a16c525ae.jpg",
+    "https://telegra.ph/file/03430ea064121f11decb8.jpg",
+    "https://telegra.ph/file/e9ddab724643c871d01ad.jpg",
+    "https://telegra.ph/file/feb7b9cfa5ec5cfdd5892.jpg",
+    "https://telegra.ph/file/15f3895c6b4dee389853d.jpg",
+    "https://telegra.ph/file/c62f47b1a990b8c8b184f.jpg",
+    "https://telegra.ph/file/f20ae180f58812d1b9c58.jpg",
+    "https://telegra.ph/file/4f0b51842b0849c4bd069.jpg",
+    "https://telegra.ph/file/f1ec16bc10c73b65764d7.jpg",
+    "https://telegra.ph/file/e61e351e3913966cca46c.jpg",
+    "https://telegra.ph/file/e5c2931d3f93808c7ab43.jpg",
+    "https://telegra.ph/file/0315a61c48943ac0fd2ce.jpg",
+    "https://telegra.ph/file/0ebd004f4332bd69bb86d.jpg",
+    "https://telegra.ph/file/974e9eb7d1cd032aa75c5.jpg",
+    "https://telegra.ph/file/e0ed2d5dfdb8ee0680021.jpg",
+    "https://telegra.ph/file/50f89bfd69dc6ceff0cb9.jpg"
 ]
 
 @Client.on_message(filters.command("start"))
@@ -108,27 +144,24 @@ async def start(bot, cmd):
         )
     else:
         await cmd.reply_photo(
-
-            photo=f"https://telegra.ph/file/c6f438023c60b1845552e.jpg",
-
-            caption=f"<b>Hai</b> {cmd.from_user.mention}  Brooh!🙋,\n\n<b>I'm[☞ 𝙸𝙼𝙳𝙱 𝙰𝚄𝚃𝙾 𝙵𝙸𝙻𝚃𝙴𝚁](https://t.me/Imdbfilter_bot) or you can call me as Auto-Filter Bot You Can Use Me As A Auto-filter in Your Group</b> ....\n\n<b>Its Easy To Use Me; Just Add Me To Your Group As Admin, Thats All, i will Provide Movies There</b>...🤓\n\n<b>©️MᴀɪɴᴛᴀɪɴᴇD Bʏ</b>   <a href=tg://user?id=718307810>🇮🇳🏆 𝒇𝔬𝔯ｋｅ𝓡 Ｔｇ🇮🇳💥♨</a>",
-
+            photo=f"{random.choice(PHOTO)}",
+            caption=START_MSG,
             reply_markup=InlineKeyboardMarkup(
-                [
                     [
-                        InlineKeyboardButton("Movie REQ💥", url='https://t.me/Movies_Club_2019'),
-                        InlineKeyboardButton("Webseries♻️", url='https://t.me/MoviesClubSeriesonly'),
+                    [
+                        InlineKeyboardButton("➕ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 ➕", url= "https://t.me/Cv_links_project7_bot?startgroup=true")
                     ],
-                   [
-                       InlineKeyboardButton("New Release🎞️", url='https://t.me/mcnewmovies'),
-                       InlineKeyboardButton("Channel✨", url='https://t.me/mcallmovies'),
+                    [
+                        InlineKeyboardButton("🔍 𝖲𝖾𝖺𝗋𝖼𝗁 𝖧𝖾𝗋𝖾", switch_inline_query_current_chat=''),
+                        InlineKeyboardButton("𝖦𝗋𝗈𝗎𝗉", url="https://t.me/cinema_beacon_group")
                     ],
-                     [
-                        InlineKeyboardButton("SHARE🌐", url="https://t.me/share/url?url=https%3A//t.me/share/url%3Furl%3Dhttps%253A//t.me/Movies_Club_2019")
-                    ]
+                    [
+                        InlineKeyboardButton("🕵️‍♂️ 𝖢𝗋𝖾𝖺𝗍𝗈𝗋", url="https://t.me/Joel_TG"),
+                        InlineKeyboardButton("😊 𝖠𝖻𝗈𝗎𝗍", callback_data="about")
+                    ]    
                 ]
             )
-        )
+         )
 
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
