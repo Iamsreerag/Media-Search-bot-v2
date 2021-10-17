@@ -107,9 +107,10 @@ async def start(bot, cmd):
             await cmd.reply_text(f"Something went wrong!\n\n**Error:** `{err}`")
     elif len(cmd.command) > 1 and cmd.command[1] == 'subscribe':
         invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
-        await bot.send_message(
+        await bot.send_photo(
             chat_id=cmd.from_user.id,
-            text="**Please Join My Updates Channel to use this Bot!👉ചാനലിൽ ജോയിൻ ചെയ്ത് Restart🔃 ക്ലിക്ക് ചെയ്യുക✌️**",
+            photo=f"{random.choice(PHOTO)}",
+            caption="**Please Join My Updates Channel to use this Bot!**",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
