@@ -63,9 +63,10 @@ async def start(bot, cmd):
                 )
                 return
             except Exception:
-                await bot.send_message(
+                await bot.send_photo(
                     chat_id=cmd.from_user.id,
-                    text="Something went Wrong.",
+                    photo=f"{random.choice(PHOTO)}",
+                    caption="Something went Wrong.",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
