@@ -124,7 +124,7 @@ async def start(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                     [
                     [
-                        InlineKeyboardButton("➕ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 ➕", url= "https://t.me/Cv_links_project7_bot?startgroup=true")
+                        InlineKeyboardButton("➕ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 ➕", url= "https://t.me/Imdbfilter_bot?startgroup=true")
                     ],
                     [
                         InlineKeyboardButton("🔰 Group", url="https://t.me/Movies_Club_2019"),
