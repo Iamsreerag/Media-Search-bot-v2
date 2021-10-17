@@ -48,6 +48,7 @@ async def start(bot, cmd):
                 ident, file_id = cmd.text.split("_-_-_-_")
                 await bot.send_photo(
                     chat_id=cmd.from_user.id,
+                    caption=**Please Join My Updates Channel to use this Bot!👉ചാനലിൽ ജോയിൻ ചെയ്ത് Restart🔃 ക്ലിക്ക് ചെയ്യുക**
                     photo=f"{random.choice(PHOTO)}",
                    reply_markup=InlineKeyboardMarkup(
                         [
