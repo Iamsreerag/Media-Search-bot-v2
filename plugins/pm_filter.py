@@ -1,13 +1,19 @@
 #Kanged From @TroJanZheX
 from info import AUTH_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, API_KEY, AUTH_GROUPS
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
+from pyrogram.types import Message, import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters
 import re
 import random
 from pyrogram.errors import UserNotParticipant
 from utils import get_filter_results, get_file_details, is_subscribed, get_poster
 BUTTONS = {}
-BOT = {}
+
+Pr0fess0r_99= Client(
+    "Welcome-Bot",
+     bot_token = os.environ["BOT_TOKEN"],
+     api_id = int(os.environ["API_ID"]),
+     api_hash = os.environ["API_HASH"]
+)
 
 RATING = ["(5.1/10)", "(6.2/10)", "(7.3/10)", "(8.4/10)", "(9.5/10)", "(4.3/10)", "(7.2/10)", "(8.3/10)", "(7.4/10)", "(5.3/10)",]
 GENRES = ["Crime, Drama, Fantasy",
